@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "main";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Basic LinkButton - jQuery EasyUI Demo</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.7.0/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.7.0/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.7.0/themes/color.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.7.0/demo/demo.css">
+    <script type="text/javascript" src="~/Content/jquery-easyui-1.7.0/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Content/jquery-easyui-1.7.0/jquery.easyui.min.js"></script>
+</head>
+<body style="padding:0px">
+    <center>
+        <h2 style="font-size:25px">基于EasyDL模型的图像检测数据处理系统</h2>
+    </center>
+
+    <div id="cc" style="height:900px;">
+        
+        <div data-options="region:'south'" style="height: 130px; border:0px">
+            @Html.Partial("_PartialPage3")
+        </div>
+
+        <div data-options="region:'west'" style="width: 260px; height: 300px;  border-left-width: 0px">
+            @Html.Partial("_PartialPage2")
+
+        </div>
+        <div data-options="region:'center'" style="height: 530px; border-right-width: 0px">
+            <div style="margin:20px 0;height:530px;">
+                @Html.Partial("_PartialPage1")
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $('#cc').layout();
+            setHeight();
+        });
+        function setHeight() {
+            var c = $('#cc');
+            var p = c.layout('panel', 'center');	// get the center panel
+            var oldHeight = p.panel('panel').outerHeight();
+            p.panel('resize', { height: 'auto' });
+            var newHeight = p.panel('panel').outerHeight();
+            c.layout('resize', {
+                height: (c.height() + newHeight - oldHeight)
+            });
+        }
+    </script>
+</body>
+
+</html>
+
