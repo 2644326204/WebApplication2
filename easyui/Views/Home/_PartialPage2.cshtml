@@ -4,8 +4,8 @@
         <div title="模型图像识别" style="width: 180px;">
             <ul style="list-style:none;margin-left:0px">
 
-                <li><a href="#" class="easyui-linkbutton c1" style="width:180px">下载EASYDL</a></li>
-                <li><a href="#" class="easyui-linkbutton c2" style="width:180px">EASYDL模型训练步骤</a></li>
+                <li><a onclick="clickEASYDL()" class="easyui-linkbutton c1" style="width:180px">下载EASYDL</a></li>
+                <li><a onclick="clickMode()" class="easyui-linkbutton c2" style="width:180px">EASYDL模型训练步骤</a></li>
 
 
             </ul>
@@ -14,18 +14,143 @@
             <ul style="list-style: none; margin-left: 0px">
 
 
-                <li><a href="#" class="easyui-linkbutton c1" style="width:180px">开启EASYDL SDK工具</a></li>
-                <li><a href="#" class="easyui-linkbutton c2" style="width:180px">本地获取检测图片</a></li>
-                <li><a href="#" class="easyui-linkbutton c3" style="width:180px">物体识别结果</a></li>
+                <li><a onclick="clickStart()" class="easyui-linkbutton c1" style="width:180px">开启EASYDL SDK工具</a></li>
+                <li><a onclick="clickgetResult()" class="easyui-linkbutton c2" style="width:180px">本地获取检测图片</a></li>
+                <li><a onclick="clickgetResult1()" class="easyui-linkbutton c3" style="width:180px">物体识别结果</a></li>
             </ul>
         </div>
         <div title="识别结果计算" style=" width: 180px;">
             <ul style="list-style: none; margin-left: 0px">
 
-                <li><a href="#" class="easyui-linkbutton c1" style="width:180px">相关数据输入</a></li>
-                <li><a href="#" class="easyui-linkbutton c2" style="width:180px">相关数据输出</a></li>
+                <li><a onclick="clickcondition()" class="easyui-linkbutton c1" style="width:180px">相关数据输入</a></li>
+                <li><a onclick="clickgetresult3()" class="easyui-linkbutton c2" style="width:180px">相关数据输出</a></li>
             </ul>
         </div>
    
 </div>
+<script>
+    function clicksubmitdata() {
+        //要得到真实边长a,a1
+        var picthingwidth = document.getElementById("picthingwidth").value;
+        var thingwidth = document.getElementById("thingwidth").value;
+        var a = thingwidth / picthingwidth;
+        var distance = document.getElementById("jiaoju").value;
+        var a1 = distance * a;
+        alert(a1);
 
+
+    }
+</script>
+<script>
+    function change1() {
+        alert("helldf");
+        var select = document.getElementById("state");
+        //
+        var index = select.selectedIndex;
+        if (index == 1) {
+            //alert("sfdgdfg");
+           // $('.center').remove();
+        ///alert($('.removee'));
+        var html1="<div id='center1'class='center1'>"+"@Html.Partial("_PartialPage13")"+"</div>";
+
+
+        $('.center').append(html1);
+        } else if (index == 2) {
+            //$('.center').remove();
+        ///alert($('.removee'));
+        var html1="<div id='center1'class='center1'>"+"@Html.Partial("_PartialPage13")"+"</div>";
+
+
+        $('.center').append(html1);
+        } else if (index == 3) {
+            //$('.center').remove();
+        ///alert($('.removee'));
+        var html1="<div id='center1'class='center1'>"+"@Html.Partial("_PartialPage13")"+"</div>";
+
+
+        $('.center').append(html1);
+        }
+    }
+</script>
+<script>
+
+    function clickcondition() {
+        var ifram = document.getElementById("ifram");
+        ifram.src = "center5";
+       @* $('.center').remove();
+        ///alert($('.removee'));
+        var html1="<div id='center'class='center'>"+"@Html.Partial("_PartialPage")"+"</div>";
+
+
+        $('.addd').append(html1);*@
+    }
+    function clickgetresult3() {
+        var ifram = document.getElementById("ifram");
+        ifram.src = "center6";
+        @*$('.center').remove();
+        ///alert($('.removee'));
+        var html1="<div id='center'class='center'>"+"@Html.Partial("_PartialPage10")"+"</div>";
+
+
+        $('.addd').append(html1);*@
+    }
+    function clickStart() {
+        var ifram = document.getElementById("ifram");
+        ifram.src = "center3";
+        @*$('.center').remove();
+        ///alert($('.removee'));
+        var html1="<div id='center'class='center'>"+"@Html.Partial("_PartialPage8")"+"</div>";
+
+
+        $('.addd').append(html1);*@
+    }
+    function clickgetResult1() {
+        var ifram = document.getElementById("ifram");
+        ifram.src = "center";
+       @* $('.center').remove();
+        ///alert($('.removee'));
+        var html1="<div id='center'class='center'>"+"@Html.Partial("_PartialPage9")"+"</div>";
+
+
+        $('.addd').append(html1);*@
+    }
+    function clickEASYDL() {
+        var ifram = document.getElementById("ifram");
+        ifram.src = "center1";
+       @* $('.center').remove();
+        ///alert($('.removee'));
+        var html1="<div id='center'class='center'>"+"@Html.Partial("_PartialPage6")"+"</div>";
+
+
+        $('.addd').append(html1);
+
+
+
+        var text = document.getElementById("text");
+        text.textContent = "                                                                下载EASYDL步骤\n" +
+            "1.EASYDL官网网址https://ai.baidu.com/easydl/paddle\n" +
+            "2.下载EASYDL说明书https://ai.baidu.com/ai-doc/EASYDL/fl2swlu5b\n" +
+            "3.开始使用EASYDL";*@
+    }
+    function clickgetResult() {
+        var ifram = document.getElementById("ifram");
+        ifram.src = "center4";
+       @* $('.center').remove();
+        ///alert($('.removee'));
+        var html1="<div id='center' class='center'>"+"@Html.Partial("_PartialPage1")"+"</div>";
+
+
+        $('.addd').append(html1);*@
+    }
+    function clickMode() {
+        var ifram = document.getElementById("ifram");
+        ifram.src = "center2";
+        @*$('.center').remove();
+        ///alert($('.removee'));
+        var html1="<div id='center' class='center'>"+"@Html.Partial("_PartialPage7")"+"</div>";
+
+
+        $('.addd').append(html1);*@
+
+    }
+</script>

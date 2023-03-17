@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "center";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Basic LinkButton - jQuery EasyUI Demo</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.7.0/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.7.0/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.7.0/themes/color.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.7.0/demo/demo.css">
+    <script type="text/javascript" src="~/Content/jquery-easyui-1.7.0/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Content/jquery-easyui-1.7.0/jquery.easyui.min.js"></script>
+
+</head>
+<body style="padding:0px">
+    <div style='height:490px;' id='center1'><h1 style='display:block'><input type='file' value='上传图片' id='image' class='image' onchange='change()'><span>上传图片显示</span><button style='margin-left:300px;' onclick='click1()'>图像识别结果</button><input type='text' id='result' list='6' /> </h1><img src='' width='300' ' height='300' id='img1' /></div>
+    <script>
+        function change() {
+            var image = document.getElementById("image");
+            var ima = image.value;
+            var fileName = image.files[0].name;
+            var img = document.getElementById("img1");
+
+            if (window.FileReader) {
+                var fr = new FileReader();
+                fr.readAsDataURL(image.files[0]);
+                fr.onloadend = function () {
+                    img.src = fr.result;
+                }
+            }
+            xu = ima;
+            alert(xu);
+        }
+    function click1() {
+    @*location.href = "getresult?xu="+xu;*@
+    //$('#cc').append('<h1>fdghhhhhhhhhhhhhh</h1>');
+    //var tImg = "<div id='dfggdfgd'>sfrgdfgdfhfghgf</div>";
+    // alert();
+    $('body').append("<p>sfdgfdfgfdddddddd</p>");
+    $('p').remove();
+    $.ajax({
+    type: 'post',
+    url: '@Url.Action("Contact")',
+    data: {'xu':'677'},
+    contentType: 'application/json;charset=utf-8',
+    dataType: 'json',
+    success: function (message) {
+
+    alert(message.message);
+    }
+
+    });
+
+    }
+    </script>
+    </body>
+</html>

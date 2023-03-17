@@ -30,6 +30,49 @@ namespace easyui.Controllers
 
             return View();
         }
+        public ActionResult center()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+        public ActionResult center1()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+        public ActionResult center2()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+        public ActionResult center3()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+        public ActionResult center4()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+        public ActionResult center5()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+        public ActionResult center6()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+       
         public ActionResult main()
         {
             ViewBag.Message = "Your application description page.";
@@ -171,15 +214,29 @@ namespace easyui.Controllers
 
             return View();
         }
-
+        [HttpPost()]
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            JsonResult ajaxres = new JsonResult();
+            ajaxres.JsonRequestBehavior = JsonRequestBehavior.AllowGet;
+            //ViewData["xu"] = xu;
+            ajaxres.Data = new { message = "徐敬坤" ,data1="67"};
+           // String data1 = "67876877778";
+            return ajaxres;
+        }
+        [HttpPost]
+        public ActionResult test1(String xu)
+        {
+            //json格式
+            JsonResult ajaxres = new JsonResult();
+            ajaxres.JsonRequestBehavior = JsonRequestBehavior.AllowGet;
+            ajaxres.Data = new { message = "徐敬坤" };
 
-            return View();
+            return ajaxres;
         }
         public ActionResult test1()
         {
+            //json格式
             
 
             return View();

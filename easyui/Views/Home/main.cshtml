@@ -14,14 +14,39 @@
     <link rel="stylesheet" type="text/css" href="~/Content/jquery-easyui-1.7.0/demo/demo.css">
     <script type="text/javascript" src="~/Content/jquery-easyui-1.7.0/jquery.min.js"></script>
     <script type="text/javascript" src="~/Content/jquery-easyui-1.7.0/jquery.easyui.min.js"></script>
+
 </head>
 <body style="padding:0px">
-    <center>
+   @* <div class="easyui-panel" title="condition" style="width:100%;max-width:400px;padding:30px 60px;">
+            <div style="margin-bottom:20px">
+                <input class="easyui-textbox" label="像素:" labelPosition="top" style="width:100%;">
+            </div>
+            <div style="margin-bottom:20px">
+                <input class="easyui-textbox" label="dpi:" labelPosition="top" style="width:100%;">
+            </div>
+            <div style="margin-bottom:20px">
+                <input id="picthingwidth" class="easyui-textbox" label="图片物体大小:" labelPosition="top" style="width:100%;">
+            </div>
+            <div style="margin-bottom:20px">
+                <input id="thingwidth" class="easyui-textbox" label="物理物体大小:" labelPosition="top" style="width:100%;">
+            </div>
+            <div style="margin-bottom:20px">
+                <input id="jiaoju" class="easyui-textbox" label="照相机焦距:" labelPosition="top" style="width:100%;">
+            </div>
+
+
+            <div>
+                <a onclick="clicksubmitdata()" class="easyui-linkbutton" iconCls="icon-ok" style="width:100%;height:32px">提交数据返回结果</a>
+            </div>
+        </div>*@
+      <center>
         <h2 style="font-size:25px">基于EasyDL模型的图像检测数据处理系统</h2>
     </center>
 
-    <div id="cc" style="height:900px;">
-        
+    <div id="cc" class="cc" style="height:900px;">
+        <p>window.aa</p>
+        <p><%=aa%></p>
+        <p>$aa</p>
         <div data-options="region:'south'" style="height: 130px; border:0px">
             @Html.Partial("_PartialPage3")
         </div>
@@ -31,8 +56,9 @@
 
         </div>
         <div data-options="region:'center'" style="height: 530px; border-right-width: 0px">
-            <div style="margin:20px 0;height:530px;">
-                @Html.Partial("_PartialPage1")
+            <div style="margin:20px 0;height:530px;" id="addd" class="addd">
+                <iframe id="ifram" class="ifram" src="center" style="width:100%;height:100%;border:0px" ></iframe>
+                @*<div id='center' class='center'>@Html.Partial("_PartialPage1")</div>*@
             </div>
 
         </div>
@@ -40,6 +66,66 @@
 
 
     </div>
+    @*<script>
+            function clicksubmitdata() {
+                //要得到真实边长a,a1
+                var picthingwidth = document.getElementById("picthingwidth").value;
+                var thingwidth = document.getElementById("thingwidth").value;
+                var a = thingwidth / picthingwidth;
+                var distance = document.getElementById("jiaoju").value;
+                var a1 = distance * a;
+                alert(a1);
+
+
+            }
+        </script>*@
+    <script>
+    window.onload = function () {
+
+        window.aa = "sdfgdfgdfg";
+        window.xu = "image";
+        //document.getElementById(".cc").appendChild('<h1>fdghhhhhhhhhhhhhh</h1>');
+        //document.getElementById("body").appendChild('<h1>fdghhhhhhhhhhhhhh</h1>');
+
+        // alert();
+
+        ///$('removee').remove();
+        //$('#cc').append('<h1>fdghhhhhhhhhhhhhh</h1>');
+        //$('body').append('<h1>fdghhhhhhhhhhhhhh</h1>');
+        @*$('.cc').append(@Html.Partial("_PartialPage4"));*@
+    }
+    function change() {
+        var image = document.getElementById("image");
+        var ima = image.value;
+        var fileName = image.files[0].name;
+        var img = document.getElementById("img1");
+
+        if (window.FileReader) {
+            var fr = new FileReader();
+            fr.readAsDataURL(image.files[0]);
+            fr.onloadend = function () {
+                img.src = fr.result;
+            }
+        }
+        xu = ima;
+        alert(xu);
+    }
+    
+    </script>
+    <!--<script>
+        function upload() {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Multiselect = false;//设置是否可以多选
+            ofd.Title = "请选择要处理的文件";//窗口title
+            ofd.Filter = "*.png|*.jpg|*.PNG";//筛选文本文件
+            var filepath="";
+            if (ofd.ShowDialog() == DialogResult.OK) {
+                filepath = ofd.FileName;
+            }
+            var image = document.getElementById("image");
+            image.src = filepath;
+        }
+    </script>-->
     <script type="text/javascript">
         $(function () {
             $('#cc').layout();

@@ -141,6 +141,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="1.PNG" />
+    <Content Include="2.PNG" />
+    <Content Include="3.PNG" />
+    <Content Include="4.PNG" />
+    <Content Include="5.PNG" />
+    <Content Include="6.PNG" />
+    <Content Include="7.PNG" />
+    <Content Include="8.PNG" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -1042,6 +1050,7 @@
     <Content Include="Content\jquery-easyui-1.7.0\demo\tree\tree_data2.json" />
     <Content Include="Content\jquery-easyui-1.7.0\themes\material-teal\images\Thumbs.db" />
     <Content Include="Content\jquery-easyui-1.7.0\themes\material\images\Thumbs.db" />
+    <Content Include="Error.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -1066,7 +1075,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\register.cshtml" />
     <Content Include="Views\Home\main.cshtml" />
@@ -1075,6 +1083,24 @@
     <Content Include="Views\Home\_PartialPage3.cshtml" />
     <Content Include="Views\Home\getresult.cshtml" />
     <Content Include="Views\Home\test1.cshtml" />
+    <Content Include="Views\Home\_PartialPage4.cshtml" />
+    <Content Include="Views\Home\_PartialPage5.cshtml" />
+    <Content Include="Views\Home\_PartialPage6.cshtml" />
+    <Content Include="Views\Home\_PartialPage7.cshtml" />
+    <Content Include="Views\Home\_PartialPage8.cshtml" />
+    <Content Include="Views\Home\_PartialPage9.cshtml" />
+    <Content Include="Views\Home\_PartialPage.cshtml" />
+    <Content Include="Views\Home\_PartialPage10.cshtml" />
+    <Content Include="Views\Home\_PartialPage11.cshtml" />
+    <Content Include="Views\Home\_PartialPage12.cshtml" />
+    <Content Include="Views\Home\_PartialPage13.cshtml" />
+    <Content Include="Views\Home\center.cshtml" />
+    <Content Include="Views\Home\center1.cshtml" />
+    <Content Include="Views\Home\center2.cshtml" />
+    <Content Include="Views\Home\center3.cshtml" />
+    <Content Include="Views\Home\center4.cshtml" />
+    <Content Include="Views\Home\center5.cshtml" />
+    <Content Include="Views\Home\center6.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -79,7 +79,6 @@ C:\Users\78001433\source\repos\easyui\easyui\bin\zh-Hans\System.Web.Razor.resour
 C:\Users\78001433\source\repos\easyui\easyui\bin\zh-Hans\System.Web.WebPages.resources.dll
 C:\Users\78001433\source\repos\easyui\easyui\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 C:\Users\78001433\source\repos\easyui\easyui\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
-C:\Users\78001433\source\repos\easyui\easyui\obj\Debug\easyui.csproj.AssemblyReference.cache
 C:\Users\78001433\source\repos\easyui\easyui\obj\Debug\easyui.csproj.CoreCompileInputs.cache
 C:\Users\78001433\source\repos\easyui\easyui\obj\Debug\easyui.csproj.CopyComplete
 C:\Users\78001433\source\repos\easyui\easyui\obj\Debug\easyui.dll
@@ -88,3 +87,4 @@ C:\Users\78001433\source\repos\easyui\easyui\bin\Ajax.dll
 C:\Users\78001433\source\repos\easyui\easyui\bin\DemoAjaxApp.dll
 C:\Users\78001433\source\repos\easyui\easyui\bin\Ajax.xml
 C:\Users\78001433\source\repos\easyui\easyui\bin\DemoAjaxApp.pdb
+C:\Users\78001433\source\repos\easyui\easyui\obj\Debug\easyui.csproj.AssemblyReference.cache
